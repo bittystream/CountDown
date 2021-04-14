@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InputActivity"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/ipnut_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:titleMarginStart="160dp">
+
+        <ImageView
+            android:id="@+id/return_to_my"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/return_icon"></ImageView>
+
+        <TextView
+            android:id="@+id/input_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
+            android:text="添加倒数日"
+            android:textColor="@color/background"
+            android:textSize="20dp"></TextView>
+    </android.support.v7.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <DatePicker
+            android:id="@+id/date_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"></DatePicker>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:paddingBottom="10dp"
+                    android:text="标题"
+                    android:textSize="24dp"></TextView>
+
+                <EditText
+                    android:id="@+id/input_description"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"></EditText>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginVertical="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:paddingBottom="10dp"
+                    android:text="标签"
+                    android:textSize="24dp"></TextView>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/tag_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/tag_anniversary"
+                        style="@style/tagStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/class_option_background_0"
+                        android:orientation="horizontal"
+                        android:tag="anniversary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            style="@style/InputClassImgStyle"
+                            android:padding="2dp"
+                            android:src="@drawable/anni_class_0"
+                            android:tag="anni_class"></ImageView>
+
+                        <TextView
+                            style="@style/InputClassFontStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="纪念日"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tag_birthday"
+                        style="@style/tagStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/class_option_background_0"
+                        android:orientation="horizontal"
+                        android:tag="birthday"
+                        app:layout_constraintEnd_toStartOf="@+id/tag_festival"
+                        app:layout_constraintStart_toEndOf="@+id/tag_anniversary"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            style="@style/InputClassImgStyle"
+                            android:src="@drawable/bd_class_0"
+                            android:tag="bd_class"></ImageView>
+
+                        <TextView
+                            style="@style/InputClassFontStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="生    日"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tag_festival"
+                        style="@style/tagStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/class_option_background_0"
+                        android:orientation="horizontal"
+                        android:tag="festival"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            style="@style/InputClassImgStyle"
+                            android:src="@drawable/fes_class_0"
+                            android:tag="fes_class"></ImageView>
+
+                        <TextView
+                            style="@style/InputClassFontStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="节    日"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tag_study"
+                        style="@style/tagStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/class_option_background_0"
+                        android:orientation="horizontal"
+                        android:tag="study"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tag_anniversary">
+
+                        <ImageView
+                            style="@style/InputClassImgStyle"
+                            android:src="@drawable/study_class_0"
+                            android:tag="study_class"></ImageView>
+
+                        <TextView
+                            style="@style/InputClassFontStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="学    习"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tag_work"
+                        style="@style/tagStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/class_option_background_0"
+                        android:orientation="horizontal"
+                        android:tag="work"
+                        app:layout_constraintEnd_toStartOf="@+id/tag_life"
+                        app:layout_constraintStart_toEndOf="@+id/tag_study"
+                        app:layout_constraintTop_toTopOf="@+id/tag_study">
+
+                        <ImageView
+                            style="@style/InputClassImgStyle"
+                            android:src="@drawable/work_class_0"
+                            android:tag="work_class"></ImageView>
+
+                        <TextView
+                            style="@style/InputClassFontStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="工    作"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tag_goal"
+                        style="@style/tagStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/class_option_background_0"
+                        android:orientation="horizontal"
+                        android:tag="goal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tag_study">
+
+                        <ImageView
+                            style="@style/InputClassImgStyle"
+                            android:src="@drawable/goal_class_0"
+                            android:tag="goal_class"></ImageView>
+
+                        <TextView
+                            style="@style/InputClassFontStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="目    标"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tag_travel"
+                        style="@style/tagStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/class_option_background_0"
+                        android:orientation="horizontal"
+                        android:tag="travel"
+                        app:layout_constraintEnd_toStartOf="@+id/tag_social"
+                        app:layout_constraintStart_toEndOf="@+id/tag_goal"
+                        app:layout_constraintTop_toTopOf="@+id/tag_goal">
+
+                        <ImageView
+                            style="@style/InputClassImgStyle"
+                            android:src="@drawable/travel_class_0"
+                            android:tag="travel_class"></ImageView>
+
+                        <TextView
+                            style="@style/InputClassFontStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="出    行"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tag_social"
+                        style="@style/tagStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/class_option_background_0"
+                        android:orientation="horizontal"
+                        android:tag="social"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tag_goal">
+
+                        <ImageView
+                            style="@style/InputClassImgStyle"
+                            android:src="@drawable/social_class_0"
+                            android:tag="social_class"></ImageView>
+
+                        <TextView
+                            style="@style/InputClassFontStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="社    交"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tag_life"
+                        style="@style/tagStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/class_option_background_0"
+                        android:orientation="horizontal"
+                        android:tag="life"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tag_study">
+
+                        <ImageView
+                            style="@style/InputClassImgStyle"
+                            android:src="@drawable/life_class_0"
+                            android:tag="life_class"></ImageView>
+
+                        <TextView
+                            style="@style/InputClassFontStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="生    活"></TextView>
+                    </LinearLayout>
+
+                </android.support.constraint.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:paddingBottom="10dp"
+                    android:text="备注"
+                    android:textSize="24dp"></TextView>
+
+                <EditText
+                    android:id="@+id/input_memo"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"></EditText>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/input_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="20dp"
+                android:background="@drawable/input_button_background"
+                android:padding="15dp"
+                android:text="完成"
+                android:textColor="@color/background"
+                android:textSize="20dp"></Button>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

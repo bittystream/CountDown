@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MyFragment">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的倒数日"
+            android:textSize="20dp"
+            android:layout_marginStart="160dp"
+            android:textColor="@color/background"></TextView>
+
+        <ImageView
+            android:id="@+id/add_my_day_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/add"
+            android:layout_marginLeft="110dp"></ImageView>
+    </android.support.v7.widget.Toolbar>
+
+    <ListView
+        android:id="@+id/my_list_view"
+        android:layout_marginTop="55dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#ffffff">
+
+    </ListView>
+
+
+
+</FrameLayout>

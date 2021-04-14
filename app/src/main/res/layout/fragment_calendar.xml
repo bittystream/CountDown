@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalendarFragment">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="日历"
+            android:textSize="20dp"
+            android:layout_marginStart="190dp"
+            android:textColor="@color/background"></TextView>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_marginTop="55dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="20dp">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="3dp">
+            <TextView
+                android:id="@+id/current_year_month"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2020年12月"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:background="@color/colorAccent">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/last_month"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="5dp"
+                android:layout_gravity="start|center_vertical"
+                android:scaleX="-1"
+                android:src="@drawable/right"></ImageView>
+            <ImageView
+                android:id="@+id/next_month"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="5dp"
+                android:layout_gravity="end|center_vertical"
+                android:src="@drawable/right"></ImageView>
+        </FrameLayout>
+        <TextView
+            android:id="@+id/calendar_weekday_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="日   一   二   三   四   五   六"
+            android:textSize="30sp"
+            android:background="@color/colorAccent"
+            android:paddingVertical="10dp"
+            android:layout_marginHorizontal="3dp"
+            android:gravity="center"></TextView>
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginTop="3dp"
+            android:layout_marginStart="3dp"
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/calendar_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="无倒数日"
+            android:layout_marginTop="20dp"
+            android:textSize="36sp"
+            android:textAlignment="center"
+            ></TextView>
+    </LinearLayout>
+
+</FrameLayout>

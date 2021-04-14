@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+        <ImageView
+            android:id="@+id/return_to_my_0"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/return_icon"></ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="查看倒数日"
+            android:textSize="20dp"
+            android:textColor="@color/background"
+            android:layout_marginLeft="130dp"></TextView>
+
+        <ImageView
+            android:id="@+id/more_options"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="100dp"
+            android:src="@drawable/more"></ImageView>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/detail_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:text="生日"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="30dp"></TextView>
+
+        <TextView
+            android:id="@+id/detail_days"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorFuture"
+            android:paddingVertical="10dp"
+            android:text="30"
+            android:textAlignment="center"
+            android:textColor="@color/background"
+            android:textSize="120dp"></TextView>
+
+        <TextView
+            android:id="@+id/detail_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:text="目标日："
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="30dp"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="标签："
+            style="@style/DetailTitleStyle"></TextView>
+
+        <TextView
+            android:id="@+id/detail_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="出行"
+
+            android:textSize="30dp"></TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/DetailTitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="备注："></TextView>
+
+        <TextView
+            android:id="@+id/detail_memo"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:textSize="30dp"
+            android:text="出行"></TextView>
+
+    </LinearLayout>
+
+
+</LinearLayout>

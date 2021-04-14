@@ -1,0 +1,43 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="IconStyle">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+    </style>
+
+    <style name="TodayDateStyle">
+        <item name="android:textSize">45dp</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:paddingVertical">30dp</item>
+        <item name="android:textColor">@color/background</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_marginHorizontal">20dp</item>
+    </style>
+
+    <style name="InputClassFontStyle">
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="InputClassImgStyle">
+        <item name="android:layout_width">27dp</item>
+        <item name="android:layout_height">27dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+    </style>
+
+    <style name="DetailTitleStyle">
+        <item name="android:textSize">30dp</item>
+    </style>
+
+    <style name="tagStyle">
+        <item name="android:padding">10dp</item>
+    </style>
+
+</resources>

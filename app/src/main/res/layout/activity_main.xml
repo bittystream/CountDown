@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="70dp"></FrameLayout>
+
+    <GridLayout
+        android:id="@+id/main_navi_bar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom"
+        android:background="@color/background"
+        android:columnCount="3"
+        android:orientation="horizontal"
+        android:paddingTop="5dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/my_item"
+            android:layout_marginStart="50dp">
+
+            <ImageView
+                android:id="@+id/my_icon"
+                style="@style/IconStyle"
+                android:src="@drawable/my_icon_0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+            <TextView
+                android:id="@+id/today_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="我的"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintEnd_toEndOf="@+id/my_icon"
+                app:layout_constraintStart_toStartOf="@+id/my_icon"
+                app:layout_constraintTop_toBottomOf="@+id/my_icon"></TextView>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/calendar_item"
+            android:layout_marginStart="100dp">
+
+
+            <ImageView
+                android:id="@+id/calendar_icon"
+                style="@style/IconStyle"
+                android:src="@drawable/calendar_icon_0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+            <TextView
+                android:id="@+id/calendar_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="日历"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/calendar_icon"
+                app:layout_constraintTop_toBottomOf="@+id/calendar_icon"></TextView>
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/today_item"
+            android:layout_marginStart="90dp">
+
+            <ImageView
+                android:id="@+id/today_icon"
+                style="@style/IconStyle"
+                android:src="@drawable/today_icon_0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="今天"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintEnd_toEndOf="@+id/today_icon"
+                app:layout_constraintStart_toStartOf="@+id/today_icon"
+                app:layout_constraintTop_toBottomOf="@+id/today_icon"></TextView>
+        </android.support.constraint.ConstraintLayout>
+
+    </GridLayout>
+</FrameLayout>
